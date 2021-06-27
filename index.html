@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D AR Effect</title>
+    <!-- custom css is goes here -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- model viewer script  -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+  </head>
+  <body>
+    <div class="demo">
+      <model-viewer
+      id="model"
+        src="RobotExpressive.glb"
+        ar
+        auto-rotate
+        camera-controls
+        skybox-image="piazza_bologni_2k.hdr"
+        animation-name="Running"
+        autoplay
+      ></model-viewer>
+      <div class="btn_container">
+        <button class="btn" onclick="run()">run</button>
+        <button class="btn" onclick="stop()">stop</button>
+        <button class="btn" onclick="wave()">wave</button>
+      </div>
+    </div>
+
+    <!-- custom script goes here  -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
